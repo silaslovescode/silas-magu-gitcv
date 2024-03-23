@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image in Iframe</title>
+    <title>Video Overlay</title>
     <style>
-        /* Optional: Add some styling to the iframe */
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Hide scrollbars */
-        }
-        iframe {
+        /* Style the video overlay */
+        #video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100vh; /* Set iframe height to fill the viewport */
-            border: none; /* Remove iframe border */
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            z-index: 9999; /* Ensure it's on top of other content */
+        }
+        /* Style the video itself */
+        #video-player {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- Create an iframe and set its source to the image -->
-    <iframe src="smk.jpg" alt="Silas Magu Kinyi"></iframe>
+    <!-- Video overlay -->
+    <div id="video-overlay">
+        <video id="video-player" controls autoplay>
+            <source src="your-video.mp4" type="video/mp4">
+            <!-- Add more video sources (WebM, Ogg) as needed -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Other content goes here -->
+    <h1>Your Webpage Content</h1>
 </body>
 </html>
