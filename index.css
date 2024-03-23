@@ -45,7 +45,14 @@
 
 .json {
     width: 60%;
-    background-color: #808080; /* Dark Grey */
+    background-color: #808080; /* Dark Grey */.js {
+    width: 65%;
+    background-color: #f44336; /* Red */
+}
+.jq {
+    width: 65%;
+    background-color: #f44336; /* Red */
+}
     
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 /* cyrillic-ext */
