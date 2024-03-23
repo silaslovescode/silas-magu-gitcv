@@ -1,7 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style the container to cover the left third of the page */
+        #iframe-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 33.33%; /* One-third of the page width */
+            background-color: #f0f0f0; /* Optional background color */
+        }
+
+        /* Style the iframe to fill the container */
+        #my-iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+    <!-- Your other content here -->
+
+    <!-- Container for the iframe -->
+    <div id="iframe-container">
+        <iframe id="my-iframe" src="https://www.example.com"></iframe>
+    </div>
     
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
