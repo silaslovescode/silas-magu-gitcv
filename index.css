@@ -566,5 +566,28 @@ h3 {
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
   background-color: #3d9970; /* Inner segment color */
   transform: rotate(var(--percentage, 0deg));
+
+
+
+  /* Style for the bars */
+.bar {
+  height: 10px; /* Adjust the height as needed */
+  background-color: #3498db; /* Change the color to your preference */
+  margin-bottom: 5px; /* Add spacing between bars */
+}
+
+/* Style for the circles */
+circle {
+  fill: #e74c3c; /* Change the color of the circles */
+  stroke: #ffffff; /* Add a white border around the circles */
+  stroke-width: 2; /* Adjust the border width */
+}
+
+/* Style for the container */
+svg {
+  width: 100px; /* Set the desired width for your SVG */
+  height: 100px; /* Set the desired height for your SVG */
+}
+
   transition: transform 0.5s ease;
 }
