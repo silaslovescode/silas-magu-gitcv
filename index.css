@@ -538,3 +538,16 @@ h3 {
     width: 65%;
     background-color: #f44336; /* Red */
 }
+
+.bar-chart {
+    display: flex;
+    justify-content: space-between;
+    /* Add other styling properties as needed */
+}
+
+.bar {
+    height: 20px; /* Set the desired height for your bars */
+    background-color: #2196F3; /* Example background color */
+    border: 1px solid #000; /* Add a black border around the bars */
+    /* Add other styling properties as needed */
+}
