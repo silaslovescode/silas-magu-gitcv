@@ -1,86 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Silas Magu | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silas Magu | Portfolio</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    body {
-      background: #0f172a;
-      color: #e2e8f0;
-      font-family: Arial, sans-serif;
-    }
+<style>
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
+}
 
-    .card {
-      background: #1e293b;
-      border-radius: 14px;
-      padding: 20px;
-      transition: 0.3s;
-    }
+.card {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 20px;
+  transition: 0.3s;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    .skill-bar {
-      background: #334155;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-top: 5px;
-    }
+.skill-bar {
+  background: #334155;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
 
-    .skill-fill {
-      height: 8px;
-      background: #38bdf8;
-      width: 0;
-      transition: width 1.5s ease-in-out;
-    }
+.skill-fill {
+  height: 8px;
+  background: #38bdf8;
+  width: 0;
+  transition: width 1.5s ease;
+}
 
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px;
-      border-radius: 50%;
-      font-size: 22px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
-    }
-  </style>
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+</style>
 </head>
 
 <body class="p-6">
 
 <!-- HEADER -->
-<div class="max-w-5xl mx-auto text-center mb-10">
+<div class="max-w-5xl mx-auto text-center mb-6">
   <h1 class="text-4xl font-bold">Silas Magu Kinyi</h1>
-  <p class="text-sky-400 text-lg">Web Designer • Graphics • AI Builder</p>
+  <p class="text-sky-400">Web Designer • Graphics • AI Builder</p>
+
+  <!-- DOWNLOAD BUTTON -->
+  <button onclick="downloadPDF()" 
+    class="mt-4 bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded">
+    <i class="fas fa-download"></i> Download CV as PDF
+  </button>
 </div>
 
-<!-- MAIN GRID -->
+<!-- CONTENT (IMPORTANT FOR PDF) -->
+<div id="cv-content">
+
 <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
 
   <!-- PROFILE -->
   <div class="card text-center">
-    <img src="smk.jpg" alt="Silas" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+    <img src="smk.jpg" class="w-32 h-32 mx-auto rounded-full mb-4">
 
     <h2 class="text-xl font-bold">About Me</h2>
     <p class="text-sm mt-2">
       I design modern web experiences, build UI systems, and explore AI-powered products.
-      Focused on creating clean, scalable, and impactful digital solutions.
     </p>
 
     <div class="mt-4 text-sm space-y-2">
@@ -88,46 +89,16 @@
       <p><i class="fas fa-envelope"></i> silaslovespeace@gmail.com</p>
       <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
     </div>
-
-    <div class="flex justify-center gap-4 mt-4 text-xl">
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-behance"></i></a>
-    </div>
   </div>
 
   <!-- SKILLS -->
   <div class="card md:col-span-2">
     <h2 class="text-xl font-bold mb-4">Skills</h2>
 
-    <div class="mb-3">
-      HTML
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="90%"></div>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      CSS
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="80%"></div>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      JavaScript
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="65%"></div>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      UI/UX Design
-      <div class="skill-bar">
-        <div class="skill-fill" data-width="85%"></div>
-      </div>
-    </div>
-
+    <div>HTML<div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
+    <div>CSS<div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div></div>
+    <div>JavaScript<div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div></div>
+    <div>UI/UX<div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
   </div>
 
   <!-- PROJECTS -->
@@ -137,69 +108,75 @@
     <div class="grid md:grid-cols-3 gap-4">
 
       <div class="card">
-        <h3 class="font-bold text-lg">Kenya Fantasy League</h3>
-        <p class="text-sm mt-2">
-          Fantasy football platform based on Kenyan Premier League using React & Supabase.
-        </p>
+        <h3 class="font-bold">Kenya Fantasy League</h3>
+        <p class="text-sm">Fantasy football platform</p>
       </div>
 
       <div class="card">
-        <h3 class="font-bold text-lg">Music Distribution App</h3>
-        <p class="text-sm mt-2">
-          Platform for uploading and sharing music using Google Forms backend.
-        </p>
+        <h3 class="font-bold">Music App</h3>
+        <p class="text-sm">Music sharing platform</p>
       </div>
 
       <div class="card">
-        <h3 class="font-bold text-lg">AI Trading Dashboard</h3>
-        <p class="text-sm mt-2">
-          Crypto analytics dashboard with trading insights and signals.
-        </p>
+        <h3 class="font-bold">AI Trading Dashboard</h3>
+        <p class="text-sm">Crypto insights dashboard</p>
       </div>
 
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
-  <div class="card md:col-span-3">
-    <h2 class="text-xl font-bold mb-4">Experience</h2>
-
-    <ul class="space-y-3">
-      <li>
-        <strong>Technical Consultant - Web Design</strong><br>
-        <span class="text-sm text-gray-400">2019 - Present</span>
-      </li>
-
-      <li>
-        <strong>Web Designer</strong><br>
-        <span class="text-sm text-gray-400">2018</span>
-      </li>
-    </ul>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="card md:col-span-3">
-    <h2 class="text-xl font-bold mb-4">Education</h2>
-
-    <p>BSc Web Design & Development</p>
-    <p class="text-sm text-gray-400">2016 - 2020</p>
-  </div>
-
+</div>
 </div>
 
-<!-- WHATSAPP BUTTON -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/254719269219" target="_blank" class="whatsapp-btn">
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- SCRIPT -->
+<!-- LIBRARIES -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- SCRIPTS -->
 <script>
-  // Animate skill bars on load
-  window.addEventListener("load", () => {
-    document.querySelectorAll(".skill-fill").forEach(bar => {
-      bar.style.width = bar.getAttribute("data-width");
-    });
+// Animate skills
+window.onload = () => {
+  document.querySelectorAll(".skill-fill").forEach(bar => {
+    bar.style.width = bar.getAttribute("data-width");
   });
+};
+
+// DOWNLOAD PDF FUNCTION
+async function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+
+  const element = document.getElementById("cv-content");
+
+  const canvas = await html2canvas(element, { scale: 2 });
+
+  const imgData = canvas.toDataURL("image/png");
+
+  const pdf = new jsPDF("p", "mm", "a4");
+
+  const imgWidth = 210;
+  const pageHeight = 295;
+  const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+  let heightLeft = imgHeight;
+  let position = 0;
+
+  pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+  heightLeft -= pageHeight;
+
+  while (heightLeft > 0) {
+    position = heightLeft - imgHeight;
+    pdf.addPage();
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pageHeight;
+  }
+
+  pdf.save("Silas_Magu_CV.pdf");
+}
 </script>
 
 </body>
